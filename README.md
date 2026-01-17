@@ -96,22 +96,21 @@ flowchart TD
     A -->|User Clicks| B[Malicious Execution<br/>MITRE: T1059<br/>Kill Chain: Exploitation]
     A -->|SOC Blocks Email| X[Attack Stopped]
 
-    B -->|EDR Alert| C[Credential Access<br/>MITRE: T1003<br/>Kill Chain: Credential Access]
+B -->|EDR Alert| C[Credential Access<br/>MITRE: T1003<br/>Kill Chain: Credential Access]
     B -->|SOC Isolates Host| X
 
-    C --> D[Lateral Movement via RDP/SMB<br/>MITRE: T1021<br/>Kill Chain: Lateral Movement]
+C --> D[Lateral Movement via RDP/SMB<br/>MITRE: T1021<br/>Kill Chain: Lateral Movement]
     C -->|SOC Disables Account| X
 
-    D --> E[Data Collection<br/>MITRE: T1005 / T1039<br/>Kill Chain: Collection]
+D --> E[Data Collection<br/>MITRE: T1005 / T1039<br/>Kill Chain: Collection]
     D -->|SOC Network Containment| X
-
-    E --> F[Command & Control<br/>MITRE: T1071<br/>Kill Chain: C2]
+  E --> F[Command & Control<br/>MITRE: T1071<br/>Kill Chain: C2]
     F -->|SOC Blocks Domain/IP| X
 
-    F --> G[Data Exfiltration<br/>MITRE: T1041<br/>Kill Chain: Exfiltration]
+  F --> G[Data Exfiltration<br/>MITRE: T1041<br/>Kill Chain: Exfiltration]
     G -->|SOC Detects Data Leak| X
 
-    G --> H[Impact: Ransomware / Data Loss<br/>MITRE: T1486<br/>Kill Chain: Impact]
+G --> H[Impact: Ransomware / Data Loss<br/>MITRE: T1486<br/>Kill Chain: Impact]
 
 
 ## ✅ Final Note
